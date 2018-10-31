@@ -1,8 +1,7 @@
 # ignore all files in any directory named build
 data/
 
-# ignore all .tsv files
+# ignore all .tsv, .gz, .db files
 *.tsv
-
-# ignore all .gz files
 *.gz
+*.db
