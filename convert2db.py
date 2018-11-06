@@ -228,7 +228,6 @@ with open(folder+namesfile) as nfile:
             deathY = "NULL"
         else:
             deathY = int(deathY)
-        knowns = knowns.strip("\n")
         if knowns == "\\N":
             known = ["NULL"] * 4
         else:
@@ -383,37 +382,4 @@ with open(folder+principalsfile) as pfile:
 conn.commit()
 print("Principal cast & crew members transfered...")
 
-#ratingsdata = pd.read_table(folder+ratingsfile, sep="\t")
-#namesdata = pd.read_table(folder+namesfile, sep="\t")
-
-
 conn.close()
-
-
-
-
-"""
-import pandas as pd
-
-import shelve
-# for storing, retrieving Python objects on disk
-
-
-#ratingsdata.head()
-#titlesdata.head()
-#namesdata.head()
-
-#ratingsdata[0,"numVotes"]
-#titlesdata.shape
-
-professions = {}
-genres = {}
-
-
-ddb = shelve.open(path.join(cachedir,"tfd" + str(nf) + ".hhh"), flag="n")
-ddb["termfreq"+str(i)] = termfreq[i]
-ddb.close()
-qdb["postingslist"] = temp
-qdb["collectionfreq2"] = collectionfreq2
-tfreq = ddb["termfreq"+str(docid)]
-"""
