@@ -128,7 +128,7 @@ for year1 in range(1930,2010,10):
     G.clear()
 
 conn.close()
-print("\n\nMovies as vertices and actors/actresses as weighted (by number) of edges:")
+print("\n\nMovies as vertices and actors/actresses as weighted (by number) edges:")
 print("-------------------------------------------------------------------------")
 print(infodf)
 #print(ccdist)

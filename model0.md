@@ -1,5 +1,5 @@
 # model0 results
-Movies as vertices and actors/actresses as weighted (by number) of edges:
+Movies as vertices and actors/actresses as weighted (by number) edges:
 -------------------------------------------------------------------------
 | period | vertices | edges | max degree | largest CC |
 |--:|--:|--:|--:|--:|
