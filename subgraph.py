@@ -1,44 +1,121 @@
 # -*- coding: utf-8 -*-
 """
-Python code to read .tsv İMDB data and store it in a sqlite database
+Python code to read .tsv IMDB data and store it in a sqlite database
 
 @author: Hakan Hekimgil
 """
 
-debug = False
-debuglimit = 2000000
-titlesDone = False
-peopleDone = False
-
-step1 = 100000
-step2 = 50000
-step3 = 2500000
-step4 = 250000
-step5 = 1000000
-
-folder = "data/"
-titlesfile = "title.basics.tsv"
-ratingsfile = "title.ratings.tsv"
-namesfile = "name.basics.tsv"
-crewfile = "title.crew.tsv"
-principalsfile = "title.principals.tsv"
+# subgraph partition parameters
+year1 = 2018
+year2 = 2018
 
 
+import pandas as pd
 import sqlite3
+import networkx as nx
+
+# initialize graph
+G = nx.Graph()
+
 # connect to database
 conn = sqlite3.connect("data/imdblite.db")
-
 db = conn.cursor()
+
+# start reading and moving to db
+# transfer titles
+print("Readin titles...")
+numtitles = 0
+titleset = set()
+peopleset = set()
+
+# some helper functions
+def titleinfo(n):
+    conntemp = sqlite3.connect("data/imdblite.db")
+    dbtemp = conntemp.cursor()
+    dbtemp.execute("SELECT * FROM titles WHERE tconst = ?;", (n,))
+    infotemp = dbtemp.fetchone()
+    conntemp.close()
+    return infotemp
+def peopleinfo(n):
+    conntemp = sqlite3.connect("data/imdblite.db")
+    dbtemp = conntemp.cursor()
+    dbtemp.execute("SELECT * FROM people WHERE nconst = ?;", (n,))
+    infotemp = dbtemp.fetchone()
+    conntemp.close()
+    return infotemp
+
+
+# read and add titles
+db.execute("SELECT * FROM titles WHERE startYear >= ? AND startYear <= ?;", (year1, year2))
+movies = pd.DataFrame(db.fetchall(), columns=["tconst", "primaryTitle", "startYear", "endYear", "runtimeMinutes", "genre1", "genre2","genre3"])
+rows, columns = movies.shape
+print("{:,} titles found...".format(rows))
+for row in movies.itertuples(index=False):
+    titleid = row.tconst
+    titlename = row.primaryTitle
+    #print(titleid, titlename)
+    titleset.add(titleid)
+    G.add_node(titleid, title=titlename)
+    numtitles += 1
+print("{:,} titles added as nodes...".format(numtitles))
+
+# read and add actors/actresses
+db.execute("SELECT id FROM categories WHERE category = ? OR category = ?;", ("actor","actress"))
+actids = db.fetchall()
+assert len(actids) == 2
+db.execute(
+        "SELECT DISTINCT t.tconst, nconst " + 
+        "FROM (SELECT * FROM titles WHERE startYear >= ? AND startYear <= ?) AS t " + 
+        "INNER JOIN (SELECT * FROM principals WHERE catid = ? OR catid = ?) AS p " + 
+        "ON t.tconst = p.tconst " + 
+        "ORDER BY nconst;", (year1, year2, actids[0][0], actids[1][0]))
+edgeinfo = pd.DataFrame(db.fetchall(), columns=["tconst", "nconst"])
+prevedge = None
+tempset = set()
+for row in edgeinfo.itertuples(index=False):
+    titleid = row.tconst
+    actid = row.nconst
+    #print(titleid, actid)
+    if actid != prevedge:
+        prevedge = actid
+        tempset = set([titleid])
+    else:
+        for node in tempset:
+            if G.has_edge(node, titleid):
+                G[node][titleid]["weight"] += 1
+            else:
+                G.add_edge(node, titleid, weight=1)
+        tempset.add(titleid)
+
+
+rows, columns = movies.shape
+
+
+conn.close()
+
+
+print("Number of nodes: ", G.number_of_nodes())
+print("Number of edges: ", G.number_of_edges())
+if G.number_of_nodes() <= 20:
+    print("Nodes: ", G.nodes())
+    for node in G.nodes():
+        print(G.node[node])
+if G.number_of_edges() <= 20:
+    print("Edges: ", G.edges())
+print("Maximum degree:", max([d for n,d in G.degree()]))
+connecteds = list(nx.connected_components(G))
+maxconnectedsize = max([len(c) for c in connecteds])
+print("Size of largest connected component:", maxconnectedsize)
+temp = set([len(c) for c in connecteds])
+temp2 = [len(c) for c in connecteds]
+connectedsizes = {k:temp2.count(k) for k in temp}
+print("Number of connected components according to size:", connectedsizes)
+
+
+
+"""
+
 # make sure the tables exist
-db.execute("DROP TABLE IF EXISTS titles;")
-db.execute("DROP TABLE IF EXISTS genres;")
-db.execute("DROP TABLE IF EXISTS people;")
-db.execute("DROP TABLE IF EXISTS professions;")
-db.execute("DROP TABLE IF EXISTS ratings;")
-db.execute("DROP TABLE IF EXISTS directors;")
-db.execute("DROP TABLE IF EXISTS writers;")
-db.execute("DROP TABLE IF EXISTS principals;")
-db.execute("DROP TABLE IF EXISTS categories;")
 print("Checking/setting database tables..")
 db.execute(
         "CREATE TABLE IF NOT EXISTS titles (" + 
@@ -86,84 +163,6 @@ db.execute(
 conn.commit()
 print("Database tables set..")
 
-# start reading and moving to db
-# transfer titles
-print("Transfering titles...")
-titleset = set()
-peopleset = set()
-with open(folder+titlesfile) as tfile:
-    names = tfile.readline()[:-1].split("\t")
-    line = "\n"
-    count = 0
-    while line[-1] == "\n":
-        line = tfile.readline()
-        if len(line) == 0:
-            break
-        #print(line)
-        [tconst, ttype, title, ortitle, adult, startY, endY, runtime, gens] = line.split("\t")
-        if (int(adult) == 0) and (ttype == "movie" or ttype == "tvMovie"):
-            count += 1
-            titleset.add(int(tconst[2:]))
-            if startY == "\\N":
-                startY = "NULL"
-            else:
-                startY = int(startY)
-            if endY == "\\N":
-                endY = "NULL"
-            else:
-                endY = int(endY)
-            if runtime == "\\N":
-                runtime = "NULL"
-            else:
-                runtime = int(runtime)
-            gen1 = "NULL"
-            gen2 = "NULL"
-            gen3 = "NULL"
-            gens = gens.strip("\n")
-            if gens != "\\N":
-                gens = gens.split(",")
-                gentext = gens[0]
-                db.execute("SELECT id FROM genres WHERE genre = ?", (gentext,))
-                genid = db.fetchone()
-                if genid == None:
-                    db.execute("INSERT INTO genres (genre) VALUES (?)", (gentext,))
-                    conn.commit()
-                    db.execute("SELECT id FROM genres WHERE genre = ?", (gentext,))
-                    genid = db.fetchone()
-                gen1 = int(genid[0])
-                if len(gens) > 1:
-                    gentext = gens[1]
-                    db.execute("SELECT id FROM genres WHERE genre = ?", (gentext,))
-                    genid = db.fetchone()
-                    if genid == None:
-                        db.execute("INSERT INTO genres (genre) VALUES (?)", (gentext,))
-                        conn.commit()
-                        db.execute("SELECT id FROM genres WHERE genre = ?", (gentext,))
-                        genid = db.fetchone()
-                    gen2 = int(genid[0])
-                    if len(gens) > 2:
-                        gentext = gens[2]
-                        db.execute("SELECT id FROM genres WHERE genre = ?", (gentext,))
-                        genid = db.fetchone()
-                        if genid == None:
-                            db.execute("INSERT INTO genres (genre) VALUES (?)", (gentext,))
-                            conn.commit()
-                            db.execute("SELECT id FROM genres WHERE genre = ?", (gentext,))
-                            genid = db.fetchone()
-                        gen3 = int(genid[0])
-            db.execute(
-                    "INSERT INTO titles (tconst, primaryTitle, " + 
-                    "startYear, endYear, runtimeMinutes, genre1, genre2, genre3) " + 
-                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?);", 
-                    (int(tconst[2:]), title, startY, endY, runtime, gen1, gen2, gen3))
-            if count % step1 == 0:
-                print("{:,} titles read...".format(count))
-                conn.commit()
-            if debug:
-                if count >= debuglimit:
-                    line = "---"
-conn.commit()
-print("Titles transfered; types and genres recorded...")
 
 # transfer ratings
 print("Transfering ratings...")
@@ -350,3 +349,4 @@ print("Directors and writers transfered...")
 del(titleset)
 del(peopleset)
 conn.close()
+"""
