@@ -8,7 +8,7 @@ data such as number of nodes, number of edges, and distribution of sizes
 of connected components are examined to get a general idea on various 20-year
 windows.
 
-THIS VERSION PROCESSES THE WHOLE MOVIE DATABASE INSTEAD OF 20-YEAR WINDOWS.
+VERSION A: PROCESSES THE WHOLE MOVIE DATABASE INSTEAD OF 20-YEAR WINDOWS.
 
 @author: Hakan Hekimgil
 """
@@ -71,7 +71,7 @@ db.execute("SELECT id FROM categories WHERE category = ? OR category = ?;", ("ac
 catids = db.fetchall()
 assert len(catids) == 2
 
-for year1 in range(1980,2010,100):
+for year1 in range(1930,2010,100):
     year2 = year1 + 99
     G.clear()
     # read and add titles
@@ -169,6 +169,8 @@ for year1 in range(1980,2010,100):
     temp = set([len(c) for c in connecteds])
     temp2 = [len(c) for c in connecteds]
     connectedsizes = {k:temp2.count(k) for k in temp}
+    del(temp)
+    del(temp2)
     ccdist.append((str(year1)+"-"+str(year2),connectedsizes))
     print("Number of connected components according to size:", connectedsizes)
     

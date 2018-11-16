@@ -9,9 +9,17 @@ of connected components are examined to get a general idea on various 20-year
 windows.
 
 VERSION A: PROCESSES THE WHOLE MOVIE DATABASE INSTEAD OF 20-YEAR WINDOWS.
+VERSION F: FILTERS FOR MOVIES ACCORDING TO RATINGS.
+           (numVotes >= 200; averRating >= 6.0)
+VERSION R: FILTERS MORE RECENT AND MORE POPULAR MOVIES
+           (startYear > 1980; numVotes >= 300; averRating >= 7.0)
+           (compare with 1930/500/8.0)
 
 @author: Hakan Hekimgil
 """
+
+arating = 7.0
+nvotes = 300
 
 import numpy as np
 import pandas as pd
@@ -61,64 +69,6 @@ def findperson(txt):
     infotemp = dbtemp.fetchone()
     conntemp.close()
     return infotemp
-def connections(act1, act2):
-    return "\n".join([peopleinfo(x)[1] for x in nx.dijkstra_path(G, act1, act2, weight=None)])
-def connectionslist(act1, act2):
-    return [peopleinfo(x)[1] for x in nx.dijkstra_path(G, act1, act2, weight=None)]
-# sample connections
-samples=[(    102,    509), #  0: Kevin Bacon - Leonard Nimoy
-         (    102,1486647), #  1: Kevin Bacon - Álvaro Morte
-         (    102, 352032), #  2: Kevin Bacon - Kamal Haasan
-         (    102,     12), #  3: Kevin Bacon - Bette Davis
-         (    102, 559144), #  4: Kevin Bacon - Marlee Matlin
-         (    102,    300), #  5: Kevin Bacon - Juliette Binoche
-         (    102, 433495), #  6: Kevin Bacon - Ernst-Hugo Järegård
-         (    102, 375138), #  7: Kevin Bacon - Sofia Helin
-         (    102, 557908), #  8: Kevin Bacon - Oliver Masucci
-         (    102,   1536), #  9: Kevin Bacon - Toshirô Mifune
-         (    102, 947447), # 10: Kevin Bacon - Donnie Yen
-         (    102, 851876), # 11: Kevin Bacon - Ferdi Tayfur
-         (    102, 960385), # 12: Kevin Bacon - Ayhan Isik
-         (    102,     52), # 13: Kevin Bacon - Marcello Mastroianni
-         (    102,    122), # 14: Kevin Bacon - Charles Chaplin
-         (    102, 948000), # 15: Kevin Bacon - Cem Yilmaz
-         (    102, 839017), # 16: Kevin Bacon - Kemal Sunal
-         (    102,     80), # 17: Kevin Bacon - Orson Welles
-         (    102,    488), # 18: Kevin Bacon - Brandon Lee
-         (    102,   1472), # 19: Kevin Bacon - Jet Li
-         (    102,    241), # 20: Kevin Bacon - Jean-Claude Van Damme
-         (    102,    901), # 21: Kevin Bacon - Jean-Paul Belmondo
-         (    102,     86), # 22: Kevin Bacon - Louis de Funès
-         (    102,      7), # 23: Kevin Bacon - Humphrey Bogart
-         (    102,      1), # 24: Kevin Bacon - Fred Astaire
-         (    102,     78), # 25: Kevin Bacon - John Wayne
-         (    102,1785339), # 26: Kevin Bacon - Rami Malek
-         (    102, 461498), # 27: Kevin Bacon - Beyoncé
-         (    102,     62), # 28: Kevin Bacon - Elvis Presley
-         (    102,   1654), # 29: Kevin Bacon - Ronald Reagan
-         ( 874028,   1654), # 30: Catherine Trudeau - Ronald Reagan
-         ( 698949,     62), # 31: Émile Proulx-Cloutier - Elvis Presley
-         (1817061, 461498), # 32: Édith Cochrane - Beyoncé
-         (2954178,   4896), # 33: Pier-Luc Funk - Eminem
-         ( 324077,1982597), # 34: Patrice Godin - Rihanna
-         ( 189887,     86), # 35: Marie-Josée Croze - Louis de Funès
-         ( 479745,   1776), # 36: Marc Labrèche - Sting
-         (  99886,1785339), # 37: Hélène Bourgeois Leclerc - Rami Malek
-         ( 223518,     28), # 38: Caroline Dhavernas - Rita Hayworth
-         ( 681401,     78), # 39: Luc Picard - John Wayne
-         (1234157,   4874), # 40: Stéphane Rousseau - Vin Diesel
-         ( 495501,   1541), # 41: Pierre Lebeau - Kylie Minogue
-         ( 495799,1620783), # 42: Laurence Leboeuf - Meghan Markle
-         ( 246386,   5286), # 43: Mélissa Désormeaux-Poulin - Haley Joel Osment
-         ( 223518,   1257), # 44: Caroline Dhavernas - Ava Gardner
-         ( 888468,    329), # 45: Karine Vanasse - Jackie Chan
-         (2903342,    437), # 46: Evelyne Brochu - Woody Harrelson
-         ( 495920,     45), # 47: Julie LeBreton - Bruce Lee
-         ( 551885, 316284), # 48: Alexis Martin - Giancarlo Giannini
-         ( 399088,      3), # 49: Patrick Huard - Brigitte Bardot
-         (1481355,      7), # 50: Louis-José Houde - Humphrey Bogart
-         ( 499218,      1), # 50: Claude Legault - Fred Astaire
-         (      1,      2)]
 
 infodf = pd.DataFrame(columns=["period", "# vertices", "# edges", "density", "max degree", "largest CC"])
 ccdist = []
@@ -129,17 +79,27 @@ db.execute("SELECT id FROM categories WHERE category = ? OR category = ?;", ("ac
 catids = db.fetchall()
 assert len(catids) == 2
 
-for year1 in range(1930,2010,100):
+for year1 in range(1980,2010,100):
     year2 = year1 + 99
     G.clear()
     
     # read people and titles for a 20-year window
+#    db.execute(
+#            "SELECT DISTINCT t.tconst, nconst " + 
+#            "FROM (SELECT nconst, tconst FROM principals WHERE catid = ? OR catid = ?) AS p " + 
+#            "INNER JOIN (SELECT tconst FROM titles WHERE startYear >= ? AND startYear <= ?) AS t " + 
+#            "ON t.tconst = p.tconst " + 
+#            "ORDER BY t.tconst;", (catids[0][0], catids[1][0], year1, year2))
     db.execute(
-            "SELECT DISTINCT t.tconst, nconst " + 
-            "FROM (SELECT nconst, tconst FROM principals WHERE catid = ? OR catid = ?) AS p " + 
-            "INNER JOIN (SELECT tconst FROM titles WHERE startYear >= ? AND startYear <= ?) AS t " + 
-            "ON t.tconst = p.tconst " + 
-            "ORDER BY t.tconst;", (catids[0][0], catids[1][0], year1, year2))
+            "SELECT DISTINCT tr.tconst, nconst FROM (" + 
+            " SELECT t.tconst FROM (" + 
+            "  SELECT tconst FROM ratings WHERE numVotes >= ? AND averageRating >= ?) AS r " + 
+            " INNER JOIN (" + 
+            "  SELECT tconst FROM titles WHERE startYear >= ? AND startYear <= ?) AS t " + 
+            " ON t.tconst = r.tconst) AS tr " + 
+            "INNER JOIN (SELECT nconst, tconst FROM principals WHERE catid = ? OR catid = ?) AS p " + 
+            "ON tr.tconst = p.tconst " + 
+            "ORDER BY tr.tconst;", (nvotes, arating, year1, year2, catids[0][0], catids[1][0]))
     edgeinfo = pd.DataFrame(db.fetchall(), columns=["tconst", "nconst"])
     peopleset = set(edgeinfo.nconst.unique())
     G.add_nodes_from(edgeinfo.nconst.unique())
@@ -181,9 +141,12 @@ for year1 in range(1930,2010,100):
         death = np.NAN
         if t[1][3] != "NULL":
             death = int(t[1][3])
+        birth = np.NAN
+        if t[1][2] != "NULL":
+            birth = int(t[1][2])
         top50dfrow = pd.Series({"degree":int(t[0]), 
                                 "name":t[1][1], 
-                                "birth":int(t[1][2]),
+                                "birth":birth,
                                 "death":death}, name=ind)
         top50df = top50df.append(top50dfrow)
     #print("Actors/actresses with maximum degrees:", [peopleinfo(m) for m in top20dact])
