@@ -243,7 +243,7 @@ with open('resource_allo.pkl','wb') as f:
 L3 = list(nx.adamic_adar_index(H)) 
 adamic_adar = [(n[1], n[2]) if n[0]==act_id else (n[0], n[2]) for n in L3 if act_id in (n[0], n[1])]
 adamic_adar.sort(key=lambda n: n[1], reverse=True)
-print(resource_allo[0:10])
+print(adamic_adar[0:10])
 with open('adamic_adar.pkl','wb') as f:
     pickle.dump(adamic_adar, f)
     
