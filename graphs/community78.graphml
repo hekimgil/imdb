@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="4887746">
+      <data key="d0">Vebjørn Enger</data>
+    </node>
+    <node id="3898788">
+      <data key="d0">Trond Nilssen</data>
+    </node>
+    <node id="39402">
+      <data key="d0">Cecilie A. Mosli</data>
+    </node>
+    <node id="427379">
+      <data key="d0">Kristoffer Joner</data>
+    </node>
+    <node id="375860">
+      <data key="d0">Benjamin Helstad</data>
+    </node>
+    <node id="3042974">
+      <data key="d0">Glenn André Viste Bøe</data>
+    </node>
+    <edge source="4887746" target="427379">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4887746" target="39402">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4887746" target="3042974">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3898788" target="375860">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3898788" target="427379">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="39402" target="427379">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="39402" target="3042974">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="427379" target="375860">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="427379" target="3042974">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

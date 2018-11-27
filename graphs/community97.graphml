@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="2363939">
+      <data key="d0">Pratik Gandhi</data>
+    </node>
+    <node id="8943364">
+      <data key="d0">Deeksha Joshi</data>
+    </node>
+    <node id="8272165">
+      <data key="d0">Parth Desai</data>
+    </node>
+    <node id="9085225">
+      <data key="d0">Ridham Bhatt</data>
+    </node>
+    <node id="7470871">
+      <data key="d0">Aarohi Patel</data>
+    </node>
+    <node id="8614457">
+      <data key="d0">Chetan Daiya</data>
+    </node>
+    <node id="7630833">
+      <data key="d0">Yash Soni</data>
+    </node>
+    <node id="7630834">
+      <data key="d0">Malhar Thakar</data>
+    </node>
+    <node id="5237591">
+      <data key="d0">Monal Gajjar</data>
+    </node>
+    <node id="7630840">
+      <data key="d0">Mayur Chauhan</data>
+    </node>
+    <node id="7630841">
+      <data key="d0">Prapti Ajwalia</data>
+    </node>
+    <node id="7603070">
+      <data key="d0">Jay Bhatt</data>
+    </node>
+    <edge source="2363939" target="7630834">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2363939" target="7470871">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2363939" target="8272165">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8943364" target="7603070">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8943364" target="7630840">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8943364" target="8614457">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8272165" target="7630834">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8272165" target="7470871">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="9085225" target="7603070">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="9085225" target="7630833">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="9085225" target="7630841">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="7470871" target="7630834">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8614457" target="7603070">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8614457" target="7630840">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="7630833" target="7603070">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="7630833" target="7630841">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="7630834" target="7603070">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="7630834" target="5237591">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5237591" target="7603070">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="7630840" target="7603070">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="7630841" target="7603070">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

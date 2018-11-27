@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="366440">
+      <data key="d0">Michele Hart</data>
+    </node>
+    <node id="3228906">
+      <data key="d0">Oliver Morton</data>
+    </node>
+    <node id="1847117">
+      <data key="d0">Janelle Monáe</data>
+    </node>
+    <node id="2176983">
+      <data key="d0">Jonah Lees</data>
+    </node>
+    <edge source="366440" target="1847117">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="366440" target="2176983">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="366440" target="3228906">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3228906" target="1847117">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3228906" target="2176983">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1847117" target="2176983">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

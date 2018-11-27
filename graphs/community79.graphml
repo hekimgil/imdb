@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="4289705">
+      <data key="d0">Mawaan Rizwan</data>
+    </node>
+    <node id="2468782">
+      <data key="d0">Arsher Ali</data>
+    </node>
+    <node id="3224339">
+      <data key="d0">Salman Akhtar</data>
+    </node>
+    <node id="7584343">
+      <data key="d0">Kiran Sonia Sawar</data>
+    </node>
+    <node id="11451">
+      <data key="d0">Will Adamsdale</data>
+    </node>
+    <node id="2253821">
+      <data key="d0">Adeel Akhtar</data>
+    </node>
+    <edge source="4289705" target="2253821">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4289705" target="3224339">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4289705" target="7584343">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2468782" target="11451">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2468782" target="2253821">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3224339" target="2253821">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3224339" target="7584343">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="7584343" target="2253821">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="11451" target="2253821">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

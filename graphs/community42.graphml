@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="143779">
+      <data key="d0">Philip Casnoff</data>
+    </node>
+    <node id="382819">
+      <data key="d0">Catherine Hicks</data>
+    </node>
+    <node id="51397">
+      <data key="d0">Jamie Bamber</data>
+    </node>
+    <node id="755267">
+      <data key="d0">Katee Sackhoff</data>
+    </node>
+    <node id="1319">
+      <data key="d0">Mark Harmon</data>
+    </node>
+    <node id="1579">
+      <data key="d0">Edward James Olmos</data>
+    </node>
+    <node id="1521">
+      <data key="d0">Mary McDonnell</data>
+    </node>
+    <edge source="143779" target="1521">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="143779" target="1319">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="143779" target="382819">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="382819" target="1521">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="382819" target="1319">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="51397" target="1521">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="51397" target="1579">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="51397" target="755267">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="755267" target="1521">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="755267" target="1579">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1319" target="1521">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1579" target="1521">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

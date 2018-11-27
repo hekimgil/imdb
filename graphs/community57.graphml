@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="46112">
+      <data key="d0">Penn Badgley</data>
+    </node>
+    <node id="2915105">
+      <data key="d0">Billy Magnussen</data>
+    </node>
+    <node id="5085312">
+      <data key="d0">Tom Hutch</data>
+    </node>
+    <node id="362051">
+      <data key="d0">Diana Hardcastle</data>
+    </node>
+    <node id="809956">
+      <data key="d0">Sheridan Smith</data>
+    </node>
+    <node id="1349">
+      <data key="d0">Jennifer Love Hewitt</data>
+    </node>
+    <node id="914278">
+      <data key="d0">Dana Watkins</data>
+    </node>
+    <node id="3037833">
+      <data key="d0">Eloise Mumford</data>
+    </node>
+    <node id="1896045">
+      <data key="d0">Daniel Eric Gold</data>
+    </node>
+    <node id="276">
+      <data key="d0">Sean Astin</data>
+    </node>
+    <node id="629493">
+      <data key="d0">Paul Nicholls</data>
+    </node>
+    <node id="170550">
+      <data key="d0">Gary Cole</data>
+    </node>
+    <node id="267511">
+      <data key="d0">Sean Faris</data>
+    </node>
+    <node id="4789">
+      <data key="d0">Amanda Bynes</data>
+    </node>
+    <node id="126004">
+      <data key="d0">Dan Byrd</data>
+    </node>
+    <node id="901110">
+      <data key="d0">Stephanie Vogt</data>
+    </node>
+    <node id="924508">
+      <data key="d0">Betty White</data>
+    </node>
+    <edge source="46112" target="276">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="46112" target="170550">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="46112" target="267511">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="46112" target="4789">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="46112" target="126004">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2915105" target="1349">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2915105" target="267511">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2915105" target="924508">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5085312" target="629493">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5085312" target="809956">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5085312" target="901110">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="362051" target="1349">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="362051" target="629493">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="809956" target="629493">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="809956" target="901110">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1349" target="629493">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1349" target="267511">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1349" target="924508">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="914278" target="267511">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="914278" target="1896045">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="914278" target="3037833">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3037833" target="267511">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3037833" target="1896045">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1896045" target="267511">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="276" target="170550">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="276" target="267511">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="629493" target="901110">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="170550" target="267511">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="267511" target="924508">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4789" target="126004">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

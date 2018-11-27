@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="355232">
+      <data key="d0">Tasos Halkias</data>
+    </node>
+    <node id="652619">
+      <data key="d0">Andrea Osvárt</data>
+    </node>
+    <node id="442668">
+      <data key="d0">Maria Kavoyianni</data>
+    </node>
+    <node id="660245">
+      <data key="d0">Christopher Papakaliatis</data>
+    </node>
+    <node id="659128">
+      <data key="d0">Anna Panagiotopoulou</data>
+    </node>
+    <node id="660249">
+      <data key="d0">Mirka Papakonstantinou</data>
+    </node>
+    <edge source="355232" target="442668">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="355232" target="659128">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="355232" target="660249">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="652619" target="442668">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="652619" target="660245">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="442668" target="659128">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="442668" target="660249">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="442668" target="660245">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="659128" target="660249">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>
