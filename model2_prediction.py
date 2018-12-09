@@ -11,15 +11,16 @@ windows.
 @author: Hakan Hekimgil, Pan
 """
 
-arating = 5.0
+arating = 6.0
 nvotes = 300
+
 
 import numpy as np
 import pandas as pd
 import sqlite3
 import networkx as nx
-import operator
 import pickle
+
 #%%
 # initialize graph
 G = nx.Graph()
@@ -69,14 +70,13 @@ infodf = pd.DataFrame(columns=["period", "# vertices", "# edges", "density", "ma
 ccdist = []
 top50df = pd.DataFrame(columns=["degree", "name", "birth", "death"])
 
-#%%
 # read and add actors/actresses
 db.execute("SELECT id FROM categories WHERE category = ? OR category = ?;", ("actor","actress"))
 catids = db.fetchall()
 assert len(catids) == 2
 
-for year1 in range(1960,1980,100):
-    year2 = year1 + 20
+for year1 in range(1989,2018,100):
+    year2 = year1 + 30
     G.clear()
     
     db.execute(
@@ -201,8 +201,17 @@ conntemp.close()
 if nameerror > 0:
     print("There were {:} name errors...".format(nameerror))
 
-nx.write_graphml(H, "imdb2.graphml")
+# nx.write_graphml(H, "imdb2.graphml")
+#%%
+G1 = H  #G1 for year 1978-1998
+with open('G1.pkl','wb') as f:
+    pickle.dump(G1, f)
+#%%
+G2 = H #G2 for year 1999-2018
+with open('G2.pkl','wb') as f:
+    pickle.dump(G2, f)
 #%% Draw network
+'''
 from matplotlib import pylab as pl
 import matplotlib.pyplot as plt
 plt.figure(figsize=(17,17))
@@ -211,6 +220,7 @@ pos = nx.spring_layout(H)
 edge_width = [0.1*H[u][v]['weight'] for u,v in H.edges()]
 nx.draw_networkx(H, pos=pos, alpha=0.6, node_size=node_size, width=edge_width, \
                  node_color='r', with_labels=False)
+'''
 #%% Prediction based on different Measurements
 #input name of target artist
 name = 'Bruce Lee'
@@ -247,6 +257,53 @@ print(adamic_adar[0:10])
 with open('adamic_adar.pkl','wb') as f:
     pickle.dump(adamic_adar, f)
     
-#%% test reload pkl files
+#%% Reload pkl files
 with open('common_neigh.pkl','rb') as f:
-    listneigh = pickle.load(f)
+    common_neigh = pickle.load(f)
+with open('jacc.pkl','rb') as f:
+    jacc = pickle.load(f)
+with open('resource_allo.pkl','rb') as f:
+    resource_allo = pickle.load(f)
+with open('adamic_adar.pkl','rb') as f:
+    adamic_adar = pickle.load(f)
+#%% The pricicted artists
+predict_id = pd.DataFrame(data={'Common_Neighbor': list(list(zip(*common_neigh[0:20]))[0]),
+                             'Jaccard': list(list(zip(*jacc[0:20]))[0]),
+                             'Resource_Allocation': list(list(zip(*resource_allo[0:20]))[0]),
+                             'Adamic_Adar': list(list(zip(*adamic_adar[0:20]))[0])})
+predict_name = predict_id.applymap(lambda x: peopleinfo(x)[1])
+print(predict_name.iloc[:, 0:2])
+writer = pd.ExcelWriter('predict.xlsx')
+predict_name.to_excel(writer,'Sheet1')
+predict_id.to_excel(writer,'Sheet2')
+writer.save()
+#%%
+P1 = set(predict_name.iloc[:, 0]).intersection(predict_name.iloc[:, 1])
+P2 = set(predict_name.iloc[:, 0]).intersection(predict_name.iloc[:, 2])
+P3 = set(predict_name.iloc[:, 1]).intersection(predict_name.iloc[:, 2])
+
+P4 = set(predict_name.iloc[:, 0]).intersection(predict_name.iloc[:, 1]).intersection(predict_name.iloc[:, 2])
+
+print(P1, '\n', P2, '\n', P3, '\n', P4)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
