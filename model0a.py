@@ -62,9 +62,11 @@ def findperson(txt):
     conntemp.close()
     return infotemp
 
-infodf = pd.DataFrame(columns=["period", "# vertices", "# edges", "density", "max degree", "largest CC"])
+infodf = pd.DataFrame(columns=["period", "# vertices", "# edges", "weights", "density", 
+                               "max deg.", "max deg. (w)", "largest CC"])
 ccdist = []
 top50df = pd.DataFrame(columns=["degree", "name", "startYear"])
+top50dfw = pd.DataFrame(columns=["degree", "name", "startYear"])
 
 # read and add actors/actresses
 db.execute("SELECT id FROM categories WHERE category = ? OR category = ?;", ("actor","actress"))
@@ -136,7 +138,10 @@ for year1 in range(1930,2010,100):
     print("Network density:", nx.density(G))
     maxd = max([d for n,d in G.degree()])
     d50th = sorted([d for n,d in G.degree()])[-50]
-    print("Maximum degree:", maxd)
+    print("Maximum degree (unweighted):", maxd)
+    maxdw = max([d for n,d in G.degree(weight="weight")])
+    d50thw = sorted([d for n,d in G.degree(weight="weight")])[-50]
+    print("Maximum degree (weighted):", maxdw)
     top50dmov = sorted([(d,n) for n,d in G.degree() if d >= d50th], reverse=True)
     top50dmovfull = [(d,titleinfo(n)) for d,n in top50dmov]
     ind=0
@@ -149,6 +154,18 @@ for year1 in range(1930,2010,100):
                                 "name":t[1][1], 
                                 "startYear":year}, name=ind)
         top50df = top50df.append(top50dfrow)
+    top50dmovw = sorted([(d,n) for n,d in G.degree(weight="weight") if d >= d50thw], reverse=True)
+    top50dmovfullw = [(d,titleinfo(n)) for d,n in top50dmovw]
+    indw=0
+    for t in top50dmovfullw:
+        indw += 1
+        year = np.NAN
+        if t[1][2] != "NULL":
+            year = int(t[1][2])
+        top50dfroww = pd.Series({"degree":int(t[0]), 
+                                "name":t[1][1], 
+                                "startYear":year}, name=indw)
+        top50dfw = top50dfw.append(top50dfroww)
     #print("Movies with maximum degree:", [titleinfo(m) for m in top20dmov])
     connecteds = list(nx.connected_components(G))
     maxconnectedsize = max([len(c) for c in connecteds])
@@ -161,8 +178,10 @@ for year1 in range(1930,2010,100):
     infodfrow = pd.Series({"period":str(year1)+"-"+str(year2), 
                            "# vertices":G.number_of_nodes(), 
                            "# edges":G.number_of_edges(), 
+                           "weights":G.size(weight="weight"), 
                            "density":nx.density(G), 
-                           "max degree":max([d for n,d in G.degree()]), 
+                           "max deg.":maxd, 
+                           "max deg. (w)":maxdw, 
                            "largest CC":maxconnectedsize}, 
         name=str(year1)+"-"+str(year2))
     infodf = infodf.append(infodfrow)
@@ -183,4 +202,7 @@ print(infodf)
 print("\n\nMovies with maximum degrees:")
 print("----------------------------")
 print(top50df)
+print("\n\nMovies with maximum degrees (weighted):")
+print("---------------------------------------")
+print(top50dfw)
 #print(ccdist)

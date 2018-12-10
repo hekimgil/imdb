@@ -67,9 +67,11 @@ def findperson(txt):
     conntemp.close()
     return infotemp
 
-infodf = pd.DataFrame(columns=["period", "# vertices", "# edges", "density", "max degree", "largest CC"])
+infodf = pd.DataFrame(columns=["period", "# vertices", "# edges", "weights", "density", 
+                               "max deg.", "max deg. (w)", "largest CC"])
 ccdist = []
 top50df = pd.DataFrame(columns=["degree", "name", "startYear"])
+top50dfw = pd.DataFrame(columns=["degree", "name", "startYear"])
 
 # read and add actors/actresses
 db.execute("SELECT id FROM categories WHERE category = ? OR category = ?;", ("actor","actress"))
@@ -132,7 +134,10 @@ for year1 in range(1930,2010,100):
     print("Network density:", nx.density(G))
     maxd = max([d for n,d in G.degree()])
     d50th = sorted([d for n,d in G.degree()])[-50]
-    print("Maximum degree:", maxd)
+    print("Maximum degree (unweighted):", maxd)
+    maxdw = max([d for n,d in G.degree(weight="weight")])
+    d50thw = sorted([d for n,d in G.degree(weight="weight")])[-50]
+    print("Maximum degree (weighted):", maxdw)
     top50dmov = sorted([(d,n) for n,d in G.degree() if d >= d50th], reverse=True)
     top50dmovfull = [(d,titleinfo(n)) for d,n in top50dmov]
     ind=0
@@ -157,8 +162,10 @@ for year1 in range(1930,2010,100):
     infodfrow = pd.Series({"period":str(year1)+"-"+str(year2), 
                            "# vertices":G.number_of_nodes(), 
                            "# edges":G.number_of_edges(), 
+                           "weights":G.size(weight="weight"), 
                            "density":nx.density(G), 
-                           "max degree":max([d for n,d in G.degree()]), 
+                           "max deg.":maxd, 
+                           "max deg. (w)":maxdw, 
                            "largest CC":maxconnectedsize}, 
         name=str(year1)+"-"+str(year2))
     infodf = infodf.append(infodfrow)

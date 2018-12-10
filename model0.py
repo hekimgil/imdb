@@ -59,7 +59,8 @@ def findperson(txt):
     conntemp.close()
     return infotemp
 
-infodf = pd.DataFrame(columns=["period", "# vertices", "# edges", "density", "max degree", "largest CC"])
+infodf = pd.DataFrame(columns=["period", "# vertices", "# edges", "weights", "density", 
+                               "max deg.", "max deg. (w)", "largest CC"])
 ccdist = []
 
 # read and add actors/actresses
@@ -121,9 +122,15 @@ for year1 in range(1930,2010,10):
         print("Edges: ", G.edges())
     print("Network density:", nx.density(G))
     maxd = max([d for n,d in G.degree()])
-    print("Maximum degree:", maxd)
+    d50th = sorted([d for n,d in G.degree()])[-50]
+    print("Maximum degree (unweighted):", maxd)
+    maxdw = max([d for n,d in G.degree(weight="weight")])
+    d50thw = sorted([d for n,d in G.degree(weight="weight")])[-50]
+    print("Maximum degree (weighted):", maxdw)
     maxdmov = [n for n,d in G.degree() if d==maxd]
-    print("Movies with maximum degree:", [titleinfo(m) for m in maxdmov])
+    print("Movies with maximum degree (unweighted):", [titleinfo(m) for m in maxdmov])
+    maxdmovw = [n for n,d in G.degree(weight="weight") if d==maxdw]
+    print("Movies with maximum degree (weighted):", [titleinfo(m) for m in maxdmovw])
     connecteds = list(nx.connected_components(G))
     maxconnectedsize = max([len(c) for c in connecteds])
     #connecteds = nx.connected_components(G)
@@ -135,8 +142,10 @@ for year1 in range(1930,2010,10):
     infodfrow = pd.Series({"period":str(year1)+"-"+str(year2), 
                            "# vertices":G.number_of_nodes(), 
                            "# edges":G.number_of_edges(), 
+                           "weights":G.size(weight="weight"), 
                            "density":nx.density(G), 
-                           "max degree":max([d for n,d in G.degree()]), 
+                           "max deg.":maxd, 
+                           "max deg. (w)":maxdw, 
                            "largest CC":maxconnectedsize}, 
         name=str(year1)+"-"+str(year2))
     infodf = infodf.append(infodfrow)
