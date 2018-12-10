@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="9429121">
+      <data key="d0">Taneea Rajawat</data>
+    </node>
+    <node id="9429122">
+      <data key="d0">Aparna Upadhyay</data>
+    </node>
+    <node id="8129924">
+      <data key="d0">Chitrangada Chakraborty</data>
+    </node>
+    <node id="6668294">
+      <data key="d0">Parna Pethe</data>
+    </node>
+    <node id="4512914">
+      <data key="d0">Amey Wagh</data>
+    </node>
+    <node id="3642396">
+      <data key="d0">Vaibhav Mangale</data>
+    </node>
+    <node id="5926431">
+      <data key="d0">Saharsh Kumar Shukla</data>
+    </node>
+    <node id="5267231">
+      <data key="d0">Prathamesh Parab</data>
+    </node>
+    <node id="4308385">
+      <data key="d0">Anshuman Joshi</data>
+    </node>
+    <node id="6021800">
+      <data key="d0">Divya Unny</data>
+    </node>
+    <node id="3865129">
+      <data key="d0">Meghna Erande</data>
+    </node>
+    <node id="4309684">
+      <data key="d0">Ketaki Mategaonkar</data>
+    </node>
+    <node id="3640891">
+      <data key="d0">Mohit Gokhale</data>
+    </node>
+    <node id="534852">
+      <data key="d0">Nandu Madhav</data>
+    </node>
+    <node id="1242068">
+      <data key="d0">Dilip Prabhavalkar</data>
+    </node>
+    <node id="3252571">
+      <data key="d0">Vibhawari Deshpande</data>
+    </node>
+    <node id="3644131">
+      <data key="d0">Atharva Karve</data>
+    </node>
+    <node id="5136111">
+      <data key="d0">Hima Singh</data>
+    </node>
+    <node id="2971390">
+      <data key="d0">Girish Kulkarni</data>
+    </node>
+    <edge source="9429121" target="5926431">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="9429121" target="5136111">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="9429121" target="9429122">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="9429122" target="5926431">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="9429122" target="5136111">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8129924" target="3252571">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8129924" target="5926431">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8129924" target="6021800">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="6668294" target="1242068">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="6668294" target="2971390">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="6668294" target="4512914">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4512914" target="1242068">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4512914" target="2971390">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3642396" target="4309684">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3642396" target="3865129">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3642396" target="5267231">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5926431" target="3252571">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5926431" target="6021800">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5926431" target="5136111">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5267231" target="4309684">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5267231" target="3865129">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4308385" target="534852">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4308385" target="1242068">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4308385" target="4309684">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="6021800" target="3252571">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3865129" target="4309684">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4309684" target="534852">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4309684" target="1242068">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3640891" target="534852">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3640891" target="3252571">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3640891" target="3644131">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="534852" target="3252571">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="534852" target="3644131">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="534852" target="1242068">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1242068" target="2971390">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3252571" target="3644131">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

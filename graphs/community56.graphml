@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="616064">
+      <data key="d0">Mihail Mutafov</data>
+    </node>
+    <node id="794885">
+      <data key="d0">Hristo Shopov</data>
+    </node>
+    <node id="1526535">
+      <data key="d0">Teodora Duhovnikova</data>
+    </node>
+    <node id="1350675">
+      <data key="d0">Tanya Ilieva</data>
+    </node>
+    <node id="304282">
+      <data key="d0">Valentin Ganev</data>
+    </node>
+    <node id="671793">
+      <data key="d0">Vladimir Penev</data>
+    </node>
+    <node id="1017533">
+      <data key="d0">Harry Anichkin</data>
+    </node>
+    <node id="1707712">
+      <data key="d0">Zachary Baharov</data>
+    </node>
+    <node id="825029">
+      <data key="d0">Koyna Ruseva</data>
+    </node>
+    <node id="1593670">
+      <data key="d0">Lilia Marvilya</data>
+    </node>
+    <node id="8543688">
+      <data key="d0">Vesela Babinova</data>
+    </node>
+    <node id="1895114">
+      <data key="d0">Ivan Yurukov</data>
+    </node>
+    <node id="862539">
+      <data key="d0">Ben Tibber</data>
+    </node>
+    <node id="2390480">
+      <data key="d0">Anastassia Liutova</data>
+    </node>
+    <node id="1523032">
+      <data key="d0">Kiril Efremov</data>
+    </node>
+    <node id="6066651">
+      <data key="d0">Delly Allen</data>
+    </node>
+    <node id="8073958">
+      <data key="d0">Diana Dimitrova</data>
+    </node>
+    <node id="305009">
+      <data key="d0">Hristo Garbov</data>
+    </node>
+    <node id="2438003">
+      <data key="d0">Dicho Hristov</data>
+    </node>
+    <node id="2216703">
+      <data key="d0">Velislav Pavlov</data>
+    </node>
+    <edge source="616064" target="1707712">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="616064" target="671793">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="616064" target="1350675">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="794885" target="862539">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="794885" target="825029">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="794885" target="1593670">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="794885" target="1707712">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1526535" target="304282">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1526535" target="1895114">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1526535" target="8073958">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1526535" target="2216703">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1526535" target="2390480">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1526535" target="8543688">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1350675" target="1707712">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1350675" target="671793">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="304282" target="305009">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="304282" target="1707712">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="304282" target="2438003">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="304282" target="1895114">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="304282" target="8073958">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="671793" target="1707712">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1017533" target="1707712">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1017533" target="1523032">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1017533" target="6066651">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1707712" target="305009">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1707712" target="2438003">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1707712" target="825029">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1707712" target="1593670">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1707712" target="1523032">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1707712" target="6066651">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="825029" target="1593670">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8543688" target="2216703">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8543688" target="2390480">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1895114" target="8073958">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2390480" target="2216703">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1523032" target="6066651">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="305009" target="2438003">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

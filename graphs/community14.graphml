@@ -1,0 +1,313 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="2412545">
+      <data key="d0">Craig Stott</data>
+    </node>
+    <node id="38918">
+      <data key="d0">Kate Ashfield</data>
+    </node>
+    <node id="680198">
+      <data key="d0">Amy Phillips</data>
+    </node>
+    <node id="579595">
+      <data key="d0">Alex Menglet</data>
+    </node>
+    <node id="289038">
+      <data key="d0">James Fox</data>
+    </node>
+    <node id="1470225">
+      <data key="d0">Ciaran O'Driscoll</data>
+    </node>
+    <node id="1080214">
+      <data key="d0">Dean Andrews</data>
+    </node>
+    <node id="663">
+      <data key="d0">Dominique Swain</data>
+    </node>
+    <node id="284">
+      <data key="d0">Adam Baldwin</data>
+    </node>
+    <node id="3007005">
+      <data key="d0">Natalie Burt</data>
+    </node>
+    <node id="1960">
+      <data key="d0">Romane Bohringer</data>
+    </node>
+    <node id="555">
+      <data key="d0">Judd Nelson</data>
+    </node>
+    <node id="186030">
+      <data key="d0">Thomas Craig</data>
+    </node>
+    <node id="244911">
+      <data key="d0">Joe Duttine</data>
+    </node>
+    <node id="3512758">
+      <data key="d0">Sarah Snook</data>
+    </node>
+    <node id="129464">
+      <data key="d0">David Calder</data>
+    </node>
+    <node id="165049">
+      <data key="d0">Warren Clarke</data>
+    </node>
+    <node id="202810">
+      <data key="d0">Alki David</data>
+    </node>
+    <node id="2335945">
+      <data key="d0">Lexie Kendrick</data>
+    </node>
+    <node id="1240908">
+      <data key="d0">Kieran Bew</data>
+    </node>
+    <node id="357838">
+      <data key="d0">Emily Hamilton</data>
+    </node>
+    <node id="751950">
+      <data key="d0">Camilla Rutherford</data>
+    </node>
+    <node id="599778">
+      <data key="d0">Flora Montgomery</data>
+    </node>
+    <node id="922210">
+      <data key="d0">Madeleine West</data>
+    </node>
+    <node id="852965">
+      <data key="d0">Noah Taylor</data>
+    </node>
+    <node id="162281">
+      <data key="d0">Enzo Cilenti</data>
+    </node>
+    <node id="484202">
+      <data key="d0">James Lance</data>
+    </node>
+    <node id="8036975">
+      <data key="d0">Francesco Ferdinandi</data>
+    </node>
+    <node id="401269">
+      <data key="d0">Steve Huison</data>
+    </node>
+    <node id="212472">
+      <data key="d0">Luke de Woolfson</data>
+    </node>
+    <node id="1507708">
+      <data key="d0">Ryan Corr</data>
+    </node>
+    <edge source="2412545" target="3512758">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2412545" target="1507708">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2412545" target="8036975">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="38918" target="162281">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="38918" target="212472">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="38918" target="484202">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="38918" target="129464">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="38918" target="1080214">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="38918" target="3007005">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="680198" target="289038">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="680198" target="284">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="680198" target="555">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="680198" target="663">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="680198" target="202810">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="680198" target="751950">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="680198" target="1470225">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="579595" target="1960">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="579595" target="357838">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="579595" target="852965">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="357838">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="599778">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="1240908">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="202810">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="555">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="284">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="663">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="751950">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="1470225">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="129464">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="289038" target="165049">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1470225" target="284">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1470225" target="555">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1470225" target="663">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1470225" target="202810">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1470225" target="751950">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1080214" target="186030">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1080214" target="244911">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1080214" target="401269">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1080214" target="129464">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1080214" target="3007005">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="663" target="284">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="663" target="555">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="663" target="202810">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="663" target="751950">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="284" target="555">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="284" target="202810">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="284" target="751950">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3007005" target="129464">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1960" target="357838">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1960" target="852965">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1960" target="2335945">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="555" target="202810">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="555" target="751950">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="186030" target="244911">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="186030" target="401269">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="244911" target="401269">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3512758" target="852965">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3512758" target="922210">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3512758" target="1507708">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3512758" target="8036975">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="129464" target="165049">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="202810" target="751950">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1240908" target="357838">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1240908" target="599778">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="357838" target="852965">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="357838" target="599778">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="922210" target="852965">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="162281" target="212472">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="162281" target="484202">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="484202" target="212472">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8036975" target="1507708">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

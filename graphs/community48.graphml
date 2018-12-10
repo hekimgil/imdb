@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="3043258">
+      <data key="d0">Gustavo Egelhaaf</data>
+    </node>
+    <node id="2588226">
+      <data key="d0">Marco Antonio Aguirre</data>
+    </node>
+    <node id="309670">
+      <data key="d0">Kathleen Gati</data>
+    </node>
+    <node id="177">
+      <data key="d0">Kevin Kline</data>
+    </node>
+    <node id="3370835">
+      <data key="d0">Karla Cecilia Alvarado</data>
+    </node>
+    <node id="2103508">
+      <data key="d0">Paulina Gaitan</data>
+    </node>
+    <node id="478680">
+      <data key="d0">Alejandro de la Madrid</data>
+    </node>
+    <node id="892794">
+      <data key="d0">Antonio Velázquez</data>
+    </node>
+    <node id="2861211">
+      <data key="d0">Leonardo Alonso</data>
+    </node>
+    <node id="2089791">
+      <data key="d0">Cesar Ramos</data>
+    </node>
+    <edge source="3043258" target="2089791">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3043258" target="478680">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3043258" target="892794">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2588226" target="2103508">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2588226" target="2861211">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2588226" target="3370835">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="309670" target="177">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="309670" target="2089791">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="309670" target="2103508">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="177" target="2089791">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="177" target="2103508">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3370835" target="2103508">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="3370835" target="2861211">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2103508" target="2089791">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2103508" target="2861211">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="478680" target="2089791">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="478680" target="892794">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="892794" target="2089791">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

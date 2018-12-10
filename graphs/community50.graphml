@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="742146">
+      <data key="d0">Michael Rosenbaum</data>
+    </node>
+    <node id="571204">
+      <data key="d0">Phil McKee</data>
+    </node>
+    <node id="574468">
+      <data key="d0">Gerald McRaney</data>
+    </node>
+    <node id="552358">
+      <data key="d0">Mars Callahan</data>
+    </node>
+    <node id="364807">
+      <data key="d0">Jamie Harris</data>
+    </node>
+    <node id="2185000">
+      <data key="d0">Jennifer Nettles</data>
+    </node>
+    <node id="4865040">
+      <data key="d0">Alyvia Alyn Lind</data>
+    </node>
+    <node id="734421">
+      <data key="d0">Jay Rodan</data>
+    </node>
+    <node id="1590">
+      <data key="d0">Chazz Palminteri</data>
+    </node>
+    <node id="5401">
+      <data key="d0">Ricky Schroder</data>
+    </node>
+    <node id="573">
+      <data key="d0">Dolly Parton</data>
+    </node>
+    <edge source="742146" target="1590">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="742146" target="5401">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="742146" target="552358">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="571204" target="5401">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="571204" target="364807">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="571204" target="734421">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="574468" target="5401">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="574468" target="2185000">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="574468" target="4865040">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="574468" target="573">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="552358" target="1590">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="552358" target="5401">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="364807" target="5401">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="364807" target="734421">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2185000" target="5401">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2185000" target="4865040">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="4865040" target="5401">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="4865040" target="573">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="734421" target="5401">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1590" target="5401">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="5401" target="573">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

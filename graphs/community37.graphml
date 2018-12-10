@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="957024">
+      <data key="d0">Riccardo Zinna</data>
+    </node>
+    <node id="765924">
+      <data key="d0">Paolo Sassanelli</data>
+    </node>
+    <node id="53231">
+      <data key="d0">Mino Barbarese</data>
+    </node>
+    <node id="1309554">
+      <data key="d0">Giorgio Careccia</data>
+    </node>
+    <node id="845209">
+      <data key="d0">Aitana Sánchez-Gijón</data>
+    </node>
+    <node id="8090">
+      <data key="d0">Dino Abbrescia</data>
+    </node>
+    <node id="541503">
+      <data key="d0">Mimmo Mancini</data>
+    </node>
+    <edge source="957024" target="8090">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="957024" target="845209">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="957024" target="1309554">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="765924" target="8090">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="765924" target="53231">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="765924" target="541503">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="53231" target="8090">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="53231" target="541503">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1309554" target="8090">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1309554" target="845209">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="845209" target="8090">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="8090" target="541503">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

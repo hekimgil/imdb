@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="416">
+      <data key="d0">Terry Gilliam</data>
+    </node>
+    <node id="191906">
+      <data key="d0">Jim Cummings</data>
+    </node>
+    <node id="1385">
+      <data key="d0">Eric Idle</data>
+    </node>
+    <node id="1589">
+      <data key="d0">Michael Palin</data>
+    </node>
+    <node id="524726">
+      <data key="d0">Bud Luckey</data>
+    </node>
+    <node id="1402">
+      <data key="d0">Terry Jones</data>
+    </node>
+    <node id="92">
+      <data key="d0">John Cleese</data>
+    </node>
+    <edge source="416" target="92">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="416" target="1385">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="416" target="1402">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="416" target="1589">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="191906" target="92">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="191906" target="524726">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1385" target="92">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1385" target="1402">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="1385" target="1589">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1589" target="1402">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="524726" target="92">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1402" target="92">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

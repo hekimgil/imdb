@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="1756674">
+      <data key="d0">Jamie Parker</data>
+    </node>
+    <node id="328676">
+      <data key="d0">Christopher Good</data>
+    </node>
+    <node id="694375">
+      <data key="d0">Camilla Power</data>
+    </node>
+    <node id="1264521">
+      <data key="d0">Aidan McArdle</data>
+    </node>
+    <node id="727290">
+      <data key="d0">Jodie Rimmer</data>
+    </node>
+    <node id="406975">
+      <data key="d0">Rhys Ifans</data>
+    </node>
+    <edge source="1756674" target="1264521">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1756674" target="328676">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="328676" target="1264521">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="694375" target="406975">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="694375" target="727290">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="694375" target="1264521">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1264521" target="406975">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1264521" target="727290">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="727290" target="406975">
+      <data key="d1">1</data>
+    </edge>
+  </graph>
+</graphml>

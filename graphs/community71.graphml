@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key attr.name="weight" attr.type="long" for="edge" id="d1" />
+  <key attr.name="name" attr.type="string" for="node" id="d0" />
+  <graph edgedefault="undirected">
+    <node id="2173888">
+      <data key="d0">Alex Robertson</data>
+    </node>
+    <node id="1537825">
+      <data key="d0">Sam Heughan</data>
+    </node>
+    <node id="178335">
+      <data key="d0">Risteard Cooper</data>
+    </node>
+    <node id="3961632">
+      <data key="d0">Helen Bradbury</data>
+    </node>
+    <node id="2218213">
+      <data key="d0">Claudia Bassols</data>
+    </node>
+    <node id="2916966">
+      <data key="d0">David Ajala</data>
+    </node>
+    <node id="507207">
+      <data key="d0">Gary Lewis</data>
+    </node>
+    <node id="91083">
+      <data key="d0">Valérie Bodson</data>
+    </node>
+    <node id="3198781">
+      <data key="d0">Ben Aldridge</data>
+    </node>
+    <node id="241">
+      <data key="d0">Jean-Claude Van Damme</data>
+    </node>
+    <node id="795345">
+      <data key="d0">Lex Shrapnel</data>
+    </node>
+    <node id="3215635">
+      <data key="d0">Rock Chen</data>
+    </node>
+    <node id="173304">
+      <data key="d0">John Colton</data>
+    </node>
+    <node id="1184573">
+      <data key="d0">Josef Cannon</data>
+    </node>
+    <node id="812223">
+      <data key="d0">Hervé Sogne</data>
+    </node>
+    <edge source="2173888" target="507207">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2173888" target="1537825">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2173888" target="3198781">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2173888" target="178335">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2173888" target="3961632">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1537825" target="507207">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1537825" target="2218213">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1537825" target="795345">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1537825" target="2916966">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="1537825" target="3198781">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="178335" target="3961632">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2218213" target="241">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="2218213" target="173304">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="2218213" target="1184573">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="2218213" target="795345">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2218213" target="2916966">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="2916966" target="795345">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="507207" target="3198781">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="91083" target="241">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="91083" target="812223">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="91083" target="3215635">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="241" target="812223">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="241" target="3215635">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="241" target="173304">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="241" target="1184573">
+      <data key="d1">2</data>
+    </edge>
+    <edge source="3215635" target="812223">
+      <data key="d1">1</data>
+    </edge>
+    <edge source="173304" target="1184573">
+      <data key="d1">2</data>
+    </edge>
+  </graph>
+</graphml>
